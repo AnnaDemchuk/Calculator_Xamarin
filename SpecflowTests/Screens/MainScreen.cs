@@ -26,8 +26,8 @@ namespace SpecflowTests.Screens
         public Query btnComma = x => x.Marked(",");
         public Query btnPlus = x => x.Marked("+");
         public Query btnMinus = x => x.Marked("-");
-        public Query btnMultiply = x => x.Marked("*,");
-        public Query btnDivide = x => x.Marked("/,");
+        public Query btnMultiply = x => x.Marked("*");
+        public Query btnDivide = x => x.Marked("/");
         public Query btnEqual = x => x.Marked("=");
         public static IApp App => AppInitializer.App;
 

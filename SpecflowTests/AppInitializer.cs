@@ -13,7 +13,7 @@ namespace SpecflowTests
         static IApp _app;
         private static string _simID = null;
         private static string _apkPath = @"C:\Users\Anna\source\repos\Calculator\Calculator\bin\Release\com.companyname.calculator.apk";
-
+      //  private static string _apkPath = @".\Calculator\bin\Release\com.companyname.calculator.apk";
         public static IApp App
         {
             get { return _app; }

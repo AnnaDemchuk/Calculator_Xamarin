@@ -8,7 +8,7 @@ Given Start app
 
 @add
 Scenario Outline: Add two numbers
-	When the two numbers  "<first>" and "<second>" are added
+	When the two numbers  <first> and <second> are added
 	Then the result should be "<result>"
 
 @integer	
@@ -26,19 +26,19 @@ Scenario Outline: Add two numbers
 @double	
 	Examples: 
 	 | first  | second | result |
-	 |   1,4  |   5    |  6,6   |
+	 |   1,4  |   5    |  6,4   |
 	 |   2    |   2,4  |  4,4   |
 	 |   3,1  |   2,1  |  5,2   |
 	 |   0,1  |   2,1  |  2,2   |	
 	 |   3,2  |   0,1  |  3,3   |
-	 |   3,02 |   1,1  |  3,12  |
+	 |   3,02 |   1,1  |  4,12  |
      |   5,2  |   0,01 |  5,21  |
 
 
 @minus
-Scenario Outline: Minus two numbers
-	When the two numbers  "<first>" and "<second>" are minused
-	Then the result should be "<result>"
+Scenario Outline: Subtracting two numbers
+	When Subtract number <second> from  <first> number 
+	Then the result should be <result>
 
 @integer	
 	Examples: 
@@ -66,4 +66,59 @@ Scenario Outline: Minus two numbers
 	 |   2    |   2,01 |  0,01  |
 
 	
- 
+ @multy
+Scenario Outline: Multiply two numbers
+	When Multiply numbers <first> by  number <second> 
+	Then the result should be <result>
+
+	@integer	
+	Examples: 
+	 | first | second | result |
+	 |   0   |   0    |   0    |
+	 |   0   |   4    |   0    |
+	 |   5   |   0    |   0    |
+	 |   5   |   4    |  20    |
+ 	 |  10   |   5    |  50    | 
+	 |  -6   |   4    | -24    |
+	 |   3   |  -2    |  -6    |
+     |  -7   |  -1    |   7    |
+   
+
+   @double	
+	Examples: 
+	 | first  | second | result |
+	 |   3    |   1,3  |  3,9   |
+	 |   5,1  |   4    | 20,4   |
+	 |   4    |   0,4  |  1,6   |
+	 |   0,1  |   3    |  0,3   |	
+	 |   0,03 |   3    |  0,09  |
+	 |   2    |   2,01 |  4,02  |
+
+	  @divide
+Scenario Outline: Divide two numbers
+	When Divide number <first> by  number <second> 
+	Then the result should be <result>
+
+	@integer	
+	Examples: 
+	 | first | second | result |
+	 |   0   |   0    |   0    |
+	 |   0   |   4    |   0    |
+	 |   5   |   0    |   0    |
+	 |   5   |   5    |   1    |
+ 	 |   1   |   5    |   0,2  | 
+	 |   1   |   3    |   0,33333333333333   |
+	 |   6   |  -2    |  -3    |
+     |  -6   |  -3    |   2    |
+	 |  -10   |  2    |   5    |
+
+
+	    @double	
+	Examples: 
+	 | first  | second | result |
+	 |   6    |   1,5  |  2     |
+	 |   5,5  |   5    |  1,1   |
+	 |   4    |   0,3  |  1,33333333333333  |
+	 |   0,3  |   3    |  0,1   |	
+	 |   0,03 |   3    |  0,01  |
+	 |   4,02 |   2,01 |  2     |

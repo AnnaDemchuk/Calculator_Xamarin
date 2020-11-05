@@ -102,7 +102,7 @@ testRunner.Given("Start app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)
                 "integer"}, Category="integer")]
         [NUnit.Framework.TestCaseAttribute("111111111", "222222222", "333333333", new string[] {
                 "integer"}, Category="integer")]
-        [NUnit.Framework.TestCaseAttribute("1,4", "5", "6,6", new string[] {
+        [NUnit.Framework.TestCaseAttribute("1,4", "5", "6,4", new string[] {
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("2", "2,4", "4,4", new string[] {
                 "double"}, Category="double")]
@@ -112,7 +112,7 @@ testRunner.Given("Start app", ((string)(null)), ((TechTalk.SpecFlow.Table)(null)
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("3,2", "0,1", "3,3", new string[] {
                 "double"}, Category="double")]
-        [NUnit.Framework.TestCaseAttribute("3,02", "1,1", "3,12", new string[] {
+        [NUnit.Framework.TestCaseAttribute("3,02", "1,1", "4,12", new string[] {
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("5,2", "0,01", "5,21", new string[] {
                 "double"}, Category="double")]
@@ -154,7 +154,7 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 11
- testRunner.When(string.Format("the two numbers  \"{0}\" and \"{1}\" are added", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("the two numbers  {0} and {1} are added", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 12
  testRunner.Then(string.Format("the result should be \"{0}\"", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
@@ -164,7 +164,7 @@ this.FeatureBackground();
         }
         
         [NUnit.Framework.TestAttribute()]
-        [NUnit.Framework.DescriptionAttribute("Minus two numbers")]
+        [NUnit.Framework.DescriptionAttribute("Subtracting two numbers")]
         [NUnit.Framework.CategoryAttribute("minus")]
         [NUnit.Framework.TestCaseAttribute("0", "0", "0", new string[] {
                 "integer"}, Category="integer")]
@@ -200,7 +200,7 @@ this.FeatureBackground();
                 "double"}, Category="double")]
         [NUnit.Framework.TestCaseAttribute("2", "2,01", "0,01", new string[] {
                 "double"}, Category="double")]
-        public virtual void MinusTwoNumbers(string first, string second, string result, string[] exampleTags)
+        public virtual void SubtractingTwoNumbers(string first, string second, string result, string[] exampleTags)
         {
             string[] @__tags = new string[] {
                     "minus"};
@@ -213,7 +213,7 @@ this.FeatureBackground();
             argumentsOfScenario.Add("first", first);
             argumentsOfScenario.Add("second", second);
             argumentsOfScenario.Add("result", result);
-            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Minus two numbers", null, tagsOfScenario, argumentsOfScenario);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Subtracting two numbers", null, tagsOfScenario, argumentsOfScenario);
 #line 39
 this.ScenarioInitialize(scenarioInfo);
 #line hidden
@@ -238,10 +238,168 @@ this.ScenarioInitialize(scenarioInfo);
 this.FeatureBackground();
 #line hidden
 #line 40
- testRunner.When(string.Format("the two numbers  \"{0}\" and \"{1}\" are minused", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+ testRunner.When(string.Format("Subtract number {0} from  {1} number", second, first), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
 #line hidden
 #line 41
- testRunner.Then(string.Format("the result should be \"{0}\"", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+ testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Multiply two numbers")]
+        [NUnit.Framework.CategoryAttribute("multy")]
+        [NUnit.Framework.TestCaseAttribute("0", "0", "0", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("0", "4", "0", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("5", "0", "0", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("5", "4", "20", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("10", "5", "50", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("-6", "4", "-24", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("3", "-2", "-6", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("-7", "-1", "7", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("3", "1,3", "3,9", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("5,1", "4", "20,4", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("4", "0,4", "1,6", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("0,1", "3", "0,3", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("0,03", "3", "0,09", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("2", "2,01", "4,02", new string[] {
+                "double"}, Category="double")]
+        public virtual void MultiplyTwoNumbers(string first, string second, string result, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "multy"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("first", first);
+            argumentsOfScenario.Add("second", second);
+            argumentsOfScenario.Add("result", result);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Multiply two numbers", null, tagsOfScenario, argumentsOfScenario);
+#line 70
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 71
+ testRunner.When(string.Format("Multiply numbers {0} by  number {1}", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 72
+ testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
+#line hidden
+            }
+            this.ScenarioCleanup();
+        }
+        
+        [NUnit.Framework.TestAttribute()]
+        [NUnit.Framework.DescriptionAttribute("Divide two numbers")]
+        [NUnit.Framework.CategoryAttribute("divide")]
+        [NUnit.Framework.TestCaseAttribute("0", "0", "0", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("0", "4", "0", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("5", "0", "0", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("5", "5", "1", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("1", "5", "0,2", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("1", "3", "0,33333333333333", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("6", "-2", "-3", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("-6", "-3", "2", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("-10", "2", "5", new string[] {
+                "integer"}, Category="integer")]
+        [NUnit.Framework.TestCaseAttribute("6", "1,5", "2", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("5,5", "5", "1,1", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("4", "0,3", "1,33333333333333", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("0,3", "3", "0,1", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("0,03", "3", "0,01", new string[] {
+                "double"}, Category="double")]
+        [NUnit.Framework.TestCaseAttribute("4,02", "2,01", "2", new string[] {
+                "double"}, Category="double")]
+        public virtual void DivideTwoNumbers(string first, string second, string result, string[] exampleTags)
+        {
+            string[] @__tags = new string[] {
+                    "divide"};
+            if ((exampleTags != null))
+            {
+                @__tags = System.Linq.Enumerable.ToArray(System.Linq.Enumerable.Concat(@__tags, exampleTags));
+            }
+            string[] tagsOfScenario = @__tags;
+            System.Collections.Specialized.OrderedDictionary argumentsOfScenario = new System.Collections.Specialized.OrderedDictionary();
+            argumentsOfScenario.Add("first", first);
+            argumentsOfScenario.Add("second", second);
+            argumentsOfScenario.Add("result", result);
+            TechTalk.SpecFlow.ScenarioInfo scenarioInfo = new TechTalk.SpecFlow.ScenarioInfo("Divide two numbers", null, tagsOfScenario, argumentsOfScenario);
+#line 98
+this.ScenarioInitialize(scenarioInfo);
+#line hidden
+            bool isScenarioIgnored = default(bool);
+            bool isFeatureIgnored = default(bool);
+            if ((tagsOfScenario != null))
+            {
+                isScenarioIgnored = tagsOfScenario.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((this._featureTags != null))
+            {
+                isFeatureIgnored = this._featureTags.Where(__entry => __entry != null).Where(__entry => String.Equals(__entry, "ignore", StringComparison.CurrentCultureIgnoreCase)).Any();
+            }
+            if ((isScenarioIgnored || isFeatureIgnored))
+            {
+                testRunner.SkipScenario();
+            }
+            else
+            {
+                this.ScenarioStart();
+#line 6
+this.FeatureBackground();
+#line hidden
+#line 99
+ testRunner.When(string.Format("Divide number {0} by  number {1}", first, second), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "When ");
+#line hidden
+#line 100
+ testRunner.Then(string.Format("the result should be {0}", result), ((string)(null)), ((TechTalk.SpecFlow.Table)(null)), "Then ");
 #line hidden
             }
             this.ScenarioCleanup();

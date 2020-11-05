@@ -34,11 +34,32 @@ namespace SpecflowTests.Steps
             Assert.AreEqual(exectedResult, _mainScreen.GetTextFromField()); 
         }
 
-        [When(@"the two numbers  ""(.*)"" and ""(.*)"" are minused")]
-        public void WhenTheTwoNumbersAndAreMinused(string first, string second)
+   
+        [When(@"Subtract number (.*) from  (.*) number")]
+        public void WhenSubtractNumberFromNumber (string first, string second)
         {
             GetArrey(first);
             _mainScreen.TapOnMinus();
+            GetArrey(second);
+            _mainScreen.TapOnEquals();
+        }
+
+      
+
+        [When(@"Multiply numbers (.*) by  number (.*)")]
+        public void WhenMultiplyNumbersByNumber(string first, string second)
+        {
+            if(first[0].Equals("-")==true)
+            {
+
+            }
+              if (second[0].Equals("-") == true)
+            {
+
+            }
+
+                    GetArrey(first);
+            _mainScreen.TapOnMultply();
             GetArrey(second);
             _mainScreen.TapOnEquals();
         }
@@ -83,8 +104,8 @@ namespace SpecflowTests.Steps
                 case ',':
                     _mainScreen.TapOnComma();
                     break;
-                case '-':
-                    _mainScreen.TapOnMinus();
+                case '-':       
+                    _mainScreen.TapOnMinus();//
                     break;
                 case '+':
                     _mainScreen.TapOnPlus();

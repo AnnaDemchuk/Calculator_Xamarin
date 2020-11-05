@@ -40,7 +40,7 @@ namespace Calculator
         public void ButtonClick(View view)
         {
             Button button = (Button)view;
-            if ("123456789,".Contains(button.Text))
+            if ("1234567890,".Contains(button.Text))
                 AddButtonValues(button.Text);
             else if ("/*+-".Contains(button.Text))
                 AddOperator(button.Text);
@@ -85,10 +85,7 @@ namespace Calculator
             {
                 case "/":
                     result = first / second;
-                    if (second==0)
-                    {
-                        result = 0;
-                    }
+                   
                     break;
                 case "*":
                     result = first * second;
