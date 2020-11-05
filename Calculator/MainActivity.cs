@@ -123,8 +123,5 @@ namespace Calculator
             calcText.Text = $"{numbers[0]} {@operator} {numbers[1]}";
         }
 
-
-
-
     }
 }

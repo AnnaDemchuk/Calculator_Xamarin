@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 using Xamarin.UITest;
 using Query = System.Func<Xamarin.UITest.Queries.AppQuery, Xamarin.UITest.Queries.AppQuery>;
 
-namespace UI_TestProj.Screens
+namespace SpecflowTests.Screens
 {
   public  class MainScreen
     {

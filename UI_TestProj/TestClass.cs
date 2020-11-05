@@ -5,7 +5,7 @@ using System.Text;
 using System.Text.RegularExpressions;
 using System.Threading.Tasks;
 using NUnit.Framework;
-using UI_TestProj.Scrins;
+using UI_TestProj.Screens;
 
 namespace UI_TestProj
 {
@@ -65,7 +65,7 @@ namespace UI_TestProj
 
         [TestCase("0", "0", "0")] // ошибка System.Exception : Error while performing Query(Id("input"))
         [TestCase("0", "4", "-4")]//успешно
-        [TestCase("5", "0", "0")]// ошибка System.Exception :
+        [TestCase("5", "0", "5")]// ошибка System.Exception :
         [TestCase("5", "4", "1")]//успешно
         [TestCase("5", "8", "-3")]//успешно
         [TestCase("6", "6", "0")]//успешно
@@ -88,7 +88,7 @@ namespace UI_TestProj
         [TestCase("3", "1,3", "1,7")]//успешно
         [TestCase("5,5", "4", "1,5")]//успешно
         [TestCase("4", "0,4", "3,6")] //System.Exception : Error while performing Query(Id("input"))
-        [TestCase("3", "0,1", "2,9")] //System.Exception : Error while performing Query(Id("input"))
+        [TestCase("0,1","2,8", "2,9")] 
         [TestCase("0,02", "0,001", "0,019")] //System.Exception : Error while performing Query(Id("input"))
 
         public void MunusTwoDoubleNumbers(string first, string second, string exectedResult)

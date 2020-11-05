@@ -7,6 +7,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Calculator", "Calculator\Ca
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "UI_TestProj", "UI_TestProj\UI_TestProj.csproj", "{7435DC9A-6FBF-4E92-B283-DBFC9824FE88}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "SpecflowTests", "SpecflowTests\SpecflowTests.csproj", "{0C0CBA1B-850E-48C8-B43B-38B54E4A227D}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -23,6 +25,10 @@ Global
 		{7435DC9A-6FBF-4E92-B283-DBFC9824FE88}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{7435DC9A-6FBF-4E92-B283-DBFC9824FE88}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{7435DC9A-6FBF-4E92-B283-DBFC9824FE88}.Release|Any CPU.Build.0 = Release|Any CPU
+		{0C0CBA1B-850E-48C8-B43B-38B54E4A227D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{0C0CBA1B-850E-48C8-B43B-38B54E4A227D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{0C0CBA1B-850E-48C8-B43B-38B54E4A227D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{0C0CBA1B-850E-48C8-B43B-38B54E4A227D}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
